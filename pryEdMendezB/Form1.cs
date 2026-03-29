@@ -33,5 +33,27 @@ namespace pryEdMendezB
             frmMeses vM = new frmMeses();
             vM.ShowDialog();
         }
+
+        private void form1_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void coloresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmColores vC = new frmColores();
+            vC.ShowDialog();
+        }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmClientes vClientes = new frmClientes();
+            vClientes.ShowDialog();
+        }
+
+        private void alumnosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAlumnos vAlumnos = new frmAlumnos();
+            vAlumnos.ShowDialog();
+        }
     }
 }
