@@ -69,6 +69,7 @@
             this.btnGrabar.TabIndex = 3;
             this.btnGrabar.Text = "Grabar";
             this.btnGrabar.UseVisualStyleBackColor = true;
+            this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
             // lstMeses
             // 

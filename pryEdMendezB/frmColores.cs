@@ -20,8 +20,11 @@ namespace pryEdMendezB
         private void btnGrabar_Click(object sender, EventArgs e)
         {
             clsArchivo x = new clsArchivo();
+            x.NomArchi = "Colores.csv";
             x.Grabar(txtNombre.Text);
-            MessageBox.Show("Datos Grabados");
+            x.Recorrer(lstColores);
+           
+            
             txtNombre.Text = "";
         }
 

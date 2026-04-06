@@ -33,7 +33,7 @@
             this.lblCarrera = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbCarrera = new System.Windows.Forms.ComboBox();
             this.btnGrabar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.clmCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -86,13 +86,13 @@
             this.textBox2.Size = new System.Drawing.Size(315, 20);
             this.textBox2.TabIndex = 4;
             // 
-            // comboBox1
+            // cmbCarrera
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(81, 114);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(315, 21);
-            this.comboBox1.TabIndex = 5;
+            this.cmbCarrera.FormattingEnabled = true;
+            this.cmbCarrera.Location = new System.Drawing.Point(81, 114);
+            this.cmbCarrera.Name = "cmbCarrera";
+            this.cmbCarrera.Size = new System.Drawing.Size(315, 21);
+            this.cmbCarrera.TabIndex = 5;
             // 
             // btnGrabar
             // 
@@ -139,7 +139,7 @@
             this.ClientSize = new System.Drawing.Size(420, 450);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnGrabar);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbCarrera);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblCarrera);
@@ -161,7 +161,7 @@
         private System.Windows.Forms.Label lblCarrera;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbCarrera;
         private System.Windows.Forms.Button btnGrabar;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmCodigo;

@@ -196,7 +196,7 @@
             this.Name = "Form1";
             this.Text = "Estructura de Datos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.form1_Load);
+//            this.Load += new System.EventHandler(this.form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
