@@ -32,6 +32,18 @@ namespace pryEdMendezB
 
 
         }
+
+        public void Grabar(String Dato1, String Dato2, String Dato3)
+        {
+            StreamWriter AD = new StreamWriter(NomArchi, true); //Ab
+            AD.Write(Dato1); // escribir el contenido de la variable
+            AD.Write(";");
+            AD.Write(Dato2); //escribir contenido de variable
+            AD.Write(";");
+            AD.WriteLine(Dato3);
+            AD.Close(); //cerrar AD
+
+        }
         public void Recorrer(ListBox lstDatos)
         { 
             lstDatos.Items.Clear();
@@ -49,7 +61,7 @@ namespace pryEdMendezB
         
         
         }
-        public void recorrer(ComboBox cmbDatos)
+        public void Recorrer(ComboBox cmbDatos)
         {
             cmbDatos.Items.Clear();
             String DatoLeido = "";
@@ -66,18 +78,17 @@ namespace pryEdMendezB
 
 
         }
-        public void recorrer(DataGridView dgvDatos)
+        public void Recorrer(DataGridView dgvDatos)
         {
 
-
+            String DatoLeido;
             dgvDatos.Rows.Clear();
-            String DatoLeido = "";
             StreamReader AD = new StreamReader(NomArchi);
             DatoLeido = AD.ReadLine();
             while (DatoLeido != null)
             {
                 //aca van las lineas de codigo que hagan falta
-                dgvDatos.Rows.Add(DatoLeido);
+                dgvDatos.Rows.Add(DatoLeido.Split(';'));
                 DatoLeido = AD.ReadLine();
             }
             AD.Close();

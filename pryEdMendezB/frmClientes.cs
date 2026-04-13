@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.IO;
 namespace pryEdMendezB
 {
     public partial class frmClientes : Form
@@ -15,6 +15,21 @@ namespace pryEdMendezB
         public frmClientes()
         {
             InitializeComponent();
+        }
+
+        private void btnGrabar_Click(object sender, EventArgs e)
+        {
+            clsArchivo objClientes = new clsArchivo();
+            objClientes.NomArchi = "frmClientes.csv";
+            objClientes.Grabar(txtCodigo.Text, txtNombre.Text, txtDeuda.Text);
+            objClientes.Recorrer(Grilla);
+        }
+
+        private void frmClientes_Load(object sender, EventArgs e)
+        {
+            clsArchivo X = new clsArchivo();
+            X.NomArchi = "Clientes.CSV";
+            if (File.Exists(X.NomArchi)) X.Recorrer(Grilla);
         }
     }
 }
