@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace pryEdMendezB
 {
-    public partial class frmDatosDesarrollador : Form
+    public partial class frmCola : Form
     {
-        public frmDatosDesarrollador()
+        public frmCola()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

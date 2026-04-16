@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsArchivo.cs" />
+    <Compile Include="clsNodo.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +71,12 @@
     </Compile>
     <Compile Include="frmClientes.Designer.cs">
       <DependentUpon>frmClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCola.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCola.Designer.cs">
+      <DependentUpon>frmCola.cs</DependentUpon>
     </Compile>
     <Compile Include="frmColores.cs">
       <SubType>Form</SubType>
@@ -102,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmClientes.resx">
       <DependentUpon>frmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCola.resx">
+      <DependentUpon>frmCola.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmColores.resx">
       <DependentUpon>frmColores.cs</DependentUpon>
@@ -137,6 +147,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\soccer-neymar-paris-saint-germain-f-c-wallpaper-preview.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b10.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

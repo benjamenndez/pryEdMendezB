@@ -63,8 +63,8 @@ namespace pryEdMendezB
         }
         public void Recorrer(ComboBox cmbDatos)
         {
+            String DatoLeido;
             cmbDatos.Items.Clear();
-            String DatoLeido = "";
             StreamReader AD = new StreamReader(NomArchi);
             DatoLeido = AD.ReadLine();
             while (DatoLeido != null)
@@ -73,6 +73,7 @@ namespace pryEdMendezB
                 cmbDatos.Items.Add(DatoLeido);
                 DatoLeido = AD.ReadLine();
             }
+            cmbDatos.SelectedIndex = 0;
             AD.Close();
 
 

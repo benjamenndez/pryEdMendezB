@@ -59,5 +59,11 @@ namespace pryEdMendezB
             frmCarreras x = new frmCarreras();
             x.ShowDialog();
         }
+
+        private void colaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCola x = new frmCola();
+            x.ShowDialog();
+        }
     }
 }
