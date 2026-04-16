@@ -23,12 +23,12 @@ namespace pryEdMendezB
             clsArchivo objCarrera = new clsArchivo();
             objCarrera.NomArchi = "Carreras.csv";
             if (File.Exists(objCarrera.NomArchi)) objCarrera.Recorrer(dgvAlumnos);
-            btnGrabar.Enabled = false;
+            btnGrabar.Enabled = true;
 
             clsArchivo objAlumno = new clsArchivo();
             objAlumno.NomArchi = "Alumnos.csv";
             if (File.Exists(objCarrera.NomArchi)) objAlumno.Recorrer(cmbCarrera);
-            btnGrabar.Enabled = false;
+            btnGrabar.Enabled = true;
         }
 
         public void btnGrabar_Click(object sender, EventArgs e)

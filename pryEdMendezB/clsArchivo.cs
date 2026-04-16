@@ -94,6 +94,21 @@ namespace pryEdMendezB
             AD.Close();
 
         }
+        public void BorrarTodo()
+        {
+            StreamWriter AD = new StreamWriter(NomArchi, false); //abrir y pisa el que existe
+            AD.Close(); //cerrar AD
+        }
+        public void Grabara(String cod, String nom, String deu)
+        {
+            StreamWriter AD = new StreamWriter(NomArchi, true); //Abrir AD escritura
+            AD.Write(cod); // escribir el contenido de la variable
+            AD.Write(nom); // escribir el contenido de la variable
+            AD.WriteLine(deu); // escribir el contenido de la variable + <ENTER>
+            AD.Close(); //cerrar AD
+        }
+
+            
 
     }
 }

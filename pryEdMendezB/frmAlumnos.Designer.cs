@@ -90,6 +90,10 @@
             // cmbCarrera
             // 
             this.cmbCarrera.FormattingEnabled = true;
+            this.cmbCarrera.Items.AddRange(new object[] {
+            "Diseño Grafico",
+            "Marketing",
+            "Publicidad"});
             this.cmbCarrera.Location = new System.Drawing.Point(81, 114);
             this.cmbCarrera.Name = "cmbCarrera";
             this.cmbCarrera.Size = new System.Drawing.Size(315, 21);
