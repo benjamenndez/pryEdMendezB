@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace pryEdMendezB
 {
@@ -82,6 +83,23 @@ namespace pryEdMendezB
                 Combo.Items.Add(Aux.Nombre);
                 Aux = Aux.Siguiente;
             }
+        }
+        public void Recorrer(String NombreArchivo)
+        {
+            clsNodo Aux = Primero;
+            StreamWriter AD = new StreamWriter(NombreArchivo, false, Encoding.UTF8);
+            AD.WriteLine("Lista de espera\n");
+            AD.WriteLine("Codigo;Nombre,Tramite");
+            while (Aux != null)
+            {
+                AD.Write(Aux.Codigo);
+                AD.Write(";");
+                AD.Write(Aux.Nombre);
+                AD.Write(";");
+                AD.WriteLine(Aux.Tramite);
+                Aux = Aux.Siguiente;
+            }
+            AD.Close();
         }
     }
     

@@ -138,6 +138,7 @@
             this.btnAgregar.TabIndex = 9;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnEliminar
             // 
@@ -148,6 +149,7 @@
             this.btnEliminar.TabIndex = 10;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // lblCodigo2
             // 
@@ -280,7 +282,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(173, 166);
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // frmCola
             // 
@@ -293,6 +294,7 @@
             this.Controls.Add(this.gpbElementoEliminado);
             this.Controls.Add(this.gpbListado);
             this.Name = "frmCola";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCola";
             this.gpbNuevoElemento.ResumeLayout(false);
             this.gpbNuevoElemento.PerformLayout();

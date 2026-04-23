@@ -73,6 +73,26 @@ namespace pryEdMendezB.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap lista_enlazada {
+            get {
+                object obj = ResourceManager.GetObject("lista-enlazada", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Pila_de_datos {
+            get {
+                object obj = ResourceManager.GetObject("Pila_de_datos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap soccer_neymar_paris_saint_germain_f_c_wallpaper_preview {
             get {
                 object obj = ResourceManager.GetObject("soccer-neymar-paris-saint-germain-f-c-wallpaper-preview", resourceCulture);
