@@ -167,6 +167,7 @@
             this.btnAgregar.TabIndex = 12;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnEliminar
             // 
@@ -278,6 +279,7 @@
             this.Name = "frmPila";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPila";
+            this.Load += new System.EventHandler(this.frmPila_Load);
             this.gpbNuevoElemento.ResumeLayout(false);
             this.gpbNuevoElemento.PerformLayout();
             this.gpbElementoEliminado.ResumeLayout(false);

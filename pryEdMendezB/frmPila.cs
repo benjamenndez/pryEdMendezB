@@ -16,5 +16,26 @@ namespace pryEdMendezB
         {
             InitializeComponent();
         }
+        clsPila objPila = new clsPila();
+        private void frmPila_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            clsNodo x = new clsNodo();
+            x.Codigo = Convert.ToInt32(txtCodigo.Text);
+            x.Nombre = txtNombre.Text;
+            x.Tramite = txtTramite.Text;
+
+            objPila.Agregar(x);
+            objPila.Recorrer(dgvPila);
+            
+
+            txtCodigo.Text = "";
+            txtNombre.Text = "";
+            txtTramite.Text = "";
+        }
     }
 }
