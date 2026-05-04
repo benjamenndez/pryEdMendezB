@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
 
 namespace pryEdMendezB
 {
-    internal class clsPila
+    internal class clsListaSimple
     {
-        //campos de la clase
         private clsNodo pri;
 
         //propiedades de la clase
@@ -28,15 +27,33 @@ namespace pryEdMendezB
             }
             else
             {
-                Nuevo.Siguiente = Primero;
-                Primero = Nuevo;
+                clsNodo aux = Primero;
+                clsNodo ant = aux; //antes de pasar al siguiente numero guardo el dato anterior
+                while (aux.Codigo < Nuevo.Codigo)
+                {
+                    ant = aux;
+                    aux = aux.Siguiente;
+                    if (aux == null) break;
+                }
+                ant.Siguiente = Nuevo;
+                Nuevo.Siguiente = aux;
             }
         }
-        public void Eliminar()
+        public void Eliminar(Int32 Codigo)
         {
-            if (Primero != null)
+            if (Primero.Codigo == Codigo)
             {
                 Primero = Primero.Siguiente;
+            }
+            else
+            {
+                clsNodo Aux = Primero;
+                clsNodo Ant = Primero;
+                while (Aux != null && Aux.Codigo != Codigo)
+                {
+                    Ant = Aux;
+                    Aux = Aux.Siguiente;
+                }
             }
         }
         public void Recorrer(DataGridView Grilla)
@@ -86,6 +103,5 @@ namespace pryEdMendezB
             }
             AD.Close();
         }
-
     }
 }

@@ -142,6 +142,7 @@
             this.btnAgregar.TabIndex = 6;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // gpbEliminar
             // 
@@ -233,6 +234,7 @@
             this.Name = "frmListaSimple";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estructura de datos lineal: Lista Simple";
+            this.Load += new System.EventHandler(this.frmListaSimple_Load);
             this.gpbNuevoElemento.ResumeLayout(false);
             this.gpbNuevoElemento.PerformLayout();
             this.gpbEliminar.ResumeLayout(false);

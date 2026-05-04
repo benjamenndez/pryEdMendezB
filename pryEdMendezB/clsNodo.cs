@@ -13,6 +13,7 @@ namespace pryEdMendezB
         private string Nom;
         private string Tra;
         private clsNodo Sig;
+        private clsNodo ant;
 
         //propiedades
         public Int32 Codigo
@@ -36,6 +37,11 @@ namespace pryEdMendezB
         {
             get { return Sig; }
             set { Sig = value; }
+        }
+        public clsNodo Anterior
+        {
+            get { return ant; } 
+            set { ant = value; }
         }
     }
 }

@@ -16,5 +16,15 @@ namespace pryEdMendezB
         {
             InitializeComponent();
         }
+
+        private void frmListaSimple_Load(object sender, EventArgs e)
+        {
+            btnAgregar.Enabled = false;
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

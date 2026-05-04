@@ -31,7 +31,8 @@ namespace pryEdMendezB
 
             objPila.Agregar(x);
             objPila.Recorrer(dgvPila);
-            
+            objPila.Recorrer(lstPila);
+            objPila.Recorrer("Pila.csv");
 
             txtCodigo.Text = "";
             txtNombre.Text = "";
