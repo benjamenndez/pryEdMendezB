@@ -39,7 +39,7 @@
             // 
             this.lblCarrera.AutoSize = true;
             this.lblCarrera.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCarrera.Location = new System.Drawing.Point(47, 45);
+            this.lblCarrera.Location = new System.Drawing.Point(23, 13);
             this.lblCarrera.Name = "lblCarrera";
             this.lblCarrera.Size = new System.Drawing.Size(74, 20);
             this.lblCarrera.TabIndex = 0;
@@ -47,7 +47,7 @@
             // 
             // txtCarrera
             // 
-            this.txtCarrera.Location = new System.Drawing.Point(142, 45);
+            this.txtCarrera.Location = new System.Drawing.Point(118, 13);
             this.txtCarrera.Name = "txtCarrera";
             this.txtCarrera.Size = new System.Drawing.Size(100, 20);
             this.txtCarrera.TabIndex = 1;
@@ -55,7 +55,7 @@
             // btnGrabar
             // 
             this.btnGrabar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrabar.Location = new System.Drawing.Point(142, 82);
+            this.btnGrabar.Location = new System.Drawing.Point(118, 50);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(100, 24);
             this.btnGrabar.TabIndex = 2;
@@ -66,7 +66,7 @@
             // lstCarrera
             // 
             this.lstCarrera.FormattingEnabled = true;
-            this.lstCarrera.Location = new System.Drawing.Point(36, 122);
+            this.lstCarrera.Location = new System.Drawing.Point(12, 90);
             this.lstCarrera.Name = "lstCarrera";
             this.lstCarrera.Size = new System.Drawing.Size(206, 186);
             this.lstCarrera.TabIndex = 3;
@@ -74,7 +74,7 @@
             // btnLimpiar
             // 
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.Location = new System.Drawing.Point(36, 82);
+            this.btnLimpiar.Location = new System.Drawing.Point(12, 50);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(100, 24);
             this.btnLimpiar.TabIndex = 4;
@@ -87,13 +87,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
-            this.ClientSize = new System.Drawing.Size(262, 327);
+            this.ClientSize = new System.Drawing.Size(232, 290);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.lstCarrera);
             this.Controls.Add(this.btnGrabar);
             this.Controls.Add(this.txtCarrera);
             this.Controls.Add(this.lblCarrera);
             this.Name = "frmCarreras";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCarreras";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -19,7 +19,7 @@ namespace pryEdMendezB.Properties {
     // a través de una herramienta como ResGen o Visual Studio.
     // Para agregar o quitar un miembro, edite el archivo .ResX y, a continuación, vuelva a ejecutar ResGen
     // con la opción /str o recompile su proyecto de VS.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "18.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -83,6 +83,16 @@ namespace pryEdMendezB.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap NKg34 {
+            get {
+                object obj = ResourceManager.GetObject("NKg34", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Pila_de_datos {
             get {
                 object obj = ResourceManager.GetObject("Pila_de_datos", resourceCulture);
@@ -96,6 +106,16 @@ namespace pryEdMendezB.Properties {
         internal static System.Drawing.Bitmap soccer_neymar_paris_saint_germain_f_c_wallpaper_preview {
             get {
                 object obj = ResourceManager.GetObject("soccer-neymar-paris-saint-germain-f-c-wallpaper-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yhoo {
+            get {
+                object obj = ResourceManager.GetObject("yhoo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

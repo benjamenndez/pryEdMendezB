@@ -10,6 +10,8 @@ namespace pryEdMendezB
 {
     internal class clsCola
     {
+        //Estructura de datos dinámica y lineal, el primer dato se guarda al final y se elimina el primero
+        //Solo se pueden realizar 3 métodos, agregar, eliminar y recorrer
         //campos de las clase
         private clsNodo pri;
         private clsNodo ult;
