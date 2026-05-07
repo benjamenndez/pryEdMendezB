@@ -17,10 +17,7 @@ namespace pryEdMendezB
             InitializeComponent();
         }
 
-        private void btnListar_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void btnGrabar_Click(object sender, EventArgs e)
         {
@@ -29,6 +26,16 @@ namespace pryEdMendezB
             x.Grabar(txtNombre.Text);
             x.Recorrer(lstMeses);
 
+
+            txtNombre.Text = "";
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            clsArchivo x = new clsArchivo();
+            x.NomArchi = ("Careras.csv");
+            x.BorrarTodo();
+            x.Recorrer(lstMeses);
 
             txtNombre.Text = "";
         }

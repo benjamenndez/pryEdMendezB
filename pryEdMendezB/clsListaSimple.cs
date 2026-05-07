@@ -82,7 +82,7 @@ namespace pryEdMendezB
             Combo.Items.Clear();
             while (Aux != null)
             {
-                Combo.Items.Add(Aux.Nombre);
+                Combo.Items.Add(Aux.Codigo);
                 Aux = Aux.Siguiente;
             }
         }

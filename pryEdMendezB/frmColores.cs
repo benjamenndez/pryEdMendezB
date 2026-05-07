@@ -44,5 +44,15 @@ namespace pryEdMendezB
         {
             btnGrabar.Enabled = false;
         }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            clsArchivo x = new clsArchivo();
+            x.NomArchi = ("Careras.csv");
+            x.BorrarTodo();
+            x.Recorrer(lstColores);
+
+            txtNombre.Text = "";
+        }
     }
 }

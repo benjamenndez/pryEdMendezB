@@ -20,9 +20,7 @@ namespace pryEdMendezB
         clsListaDoble ObjDoble = new clsListaDoble();
         private void frmListaDoble_Load(object sender, EventArgs e)
         {
-            clsArchivo x = new clsArchivo();
-            x.NomArchi = "ListaDoble.csv";
-            if (File.Exists(x.NomArchi)) x.Recorrer(dgvListaDoble);
+            
             btnAgregar.Enabled = false;
         }
         private void ValidarDatos()
@@ -70,6 +68,42 @@ namespace pryEdMendezB
             txtCodigo.Text = "";
             txtNombre.Text = "";
             txtTramite.Text = "";
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (ObjDoble.Primero != null)
+            {
+                Int32 x = Convert.ToInt32(cmbCodigo.Text);
+                ObjDoble.Eliminar(x);
+                ObjDoble.Recorrer(dgvListaDoble);
+                ObjDoble.Recorrer("ListaSimple.csv");
+                ObjDoble.Recorrer(lstListaDoble);
+                ObjDoble.Recorrer(cmbCodigo);
+
+            }
+            else
+            {
+                MessageBox.Show("La lista esta vacia", "Lista sin datos",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            btnEliminar.Enabled = false;
+        }
+
+        private void rbAscendente_CheckedChanged(object sender, EventArgs e)
+        {
+            ObjDoble.Recorrer(dgvListaDoble);
+            ObjDoble.Recorrer("ListaSimple.csv");
+            ObjDoble.Recorrer(lstListaDoble);
+            ObjDoble.Recorrer(cmbCodigo);
+        }
+
+        private void rbDescendente_CheckedChanged(object sender, EventArgs e)
+        {
+            ObjDoble.RecorrerDes(dgvListaDoble);
+            ObjDoble.RecorrerDes("ListaSimple.csv");
+            ObjDoble.RecorrerDes(lstListaDoble);
+            ObjDoble.RecorrerDes(cmbCodigo);
         }
     }
 }

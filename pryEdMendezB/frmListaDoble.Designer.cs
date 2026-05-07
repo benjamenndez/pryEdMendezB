@@ -80,6 +80,7 @@
             this.rbDescendente.TabStop = true;
             this.rbDescendente.Text = "Descendente";
             this.rbDescendente.UseVisualStyleBackColor = true;
+            this.rbDescendente.CheckedChanged += new System.EventHandler(this.rbDescendente_CheckedChanged);
             // 
             // rbAscendente
             // 
@@ -92,6 +93,7 @@
             this.rbAscendente.TabStop = true;
             this.rbAscendente.Text = "Ascendente";
             this.rbAscendente.UseVisualStyleBackColor = true;
+            this.rbAscendente.CheckedChanged += new System.EventHandler(this.rbAscendente_CheckedChanged);
             // 
             // gbEliminado
             // 
@@ -132,6 +134,7 @@
             this.btnEliminar.TabIndex = 6;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // gbNuevo
             // 

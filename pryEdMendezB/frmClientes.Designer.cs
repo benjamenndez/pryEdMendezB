@@ -78,6 +78,7 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(133, 20);
             this.txtCodigo.TabIndex = 3;
+            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
             // txtDeuda
             // 
@@ -85,6 +86,7 @@
             this.txtDeuda.Name = "txtDeuda";
             this.txtDeuda.Size = new System.Drawing.Size(133, 20);
             this.txtDeuda.TabIndex = 4;
+            this.txtDeuda.TextChanged += new System.EventHandler(this.txtDeuda_TextChanged);
             // 
             // txtNombre
             // 
@@ -92,6 +94,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(277, 20);
             this.txtNombre.TabIndex = 5;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // btnGrabar
             // 

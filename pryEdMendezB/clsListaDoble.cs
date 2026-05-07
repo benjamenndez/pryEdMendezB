@@ -119,5 +119,91 @@ namespace pryEdMendezB
             }
             AD.Close();
         }
+        public void RecorrerDes(DataGridView Grilla)
+        {
+            clsNodo Aux = Ultimo;
+            Grilla.Rows.Clear();
+            while (Aux != null)
+            {
+                Grilla.Rows.Add(Aux.Codigo, Aux.Nombre, Aux.Tramite);
+                Aux = Aux.Anterior;
+            }
+
+        }
+        public void RecorrerDes(ListBox Lista)
+        {
+            clsNodo Aux = Ultimo;
+            Lista.Items.Clear();
+            while (Aux != null)
+            {
+                Lista.Items.Add(Aux.Nombre);
+                Aux = Aux.Anterior;
+            }
+
+        }
+        public void RecorrerDes(ComboBox Combo)
+        {
+            clsNodo Aux = Ultimo;
+            Combo.Items.Clear();
+            while (Aux != null)
+            {
+                Combo.Items.Add(Aux.Codigo);
+                Aux = Aux.Anterior;
+            }
+
+        }
+        public void RecorrerDes(string NombreArchivo)
+        {
+            clsNodo Aux = Ultimo;
+            StreamWriter AD = new StreamWriter(NombreArchivo, false, Encoding.UTF8);
+            AD.WriteLine("Código; Nombre; Trámite");
+            while (Aux != null)
+            {
+                AD.Write(Aux.Codigo);
+                AD.Write(";");
+                AD.Write(Aux.Nombre);
+                AD.Write(";");
+                AD.WriteLine(Aux.Tramite);
+                Aux = Aux.Anterior;
+            }
+            AD.Close();
+        }
+        public void Eliminar(Int32 Codigo)
+        {
+            if (Primero.Codigo == Codigo && Ultimo == Primero)
+            {
+                Primero = null;
+                Ultimo = null; 
+            }
+            else
+            {
+                if (Primero.Codigo == Codigo)
+                {
+                    Primero = Primero.Siguiente;
+                    Primero.Anterior = null;
+                }
+                else
+                {
+                    if (Ultimo.Codigo == Codigo)
+                    {
+                        Ultimo = Ultimo.Anterior;
+                        Ultimo.Siguiente = null;
+                    }
+                    else
+                    {
+                        clsNodo aux = Primero;
+                        clsNodo ant = Primero;
+                        while (aux.Codigo < Codigo)
+                        {
+                            ant = aux;
+                            aux = aux.Siguiente;
+                        }
+                        aux = aux.Siguiente;
+                        ant.Siguiente = aux;
+                        aux.Anterior = ant;
+                    }
+                }
+            }
+        }
     }
 }

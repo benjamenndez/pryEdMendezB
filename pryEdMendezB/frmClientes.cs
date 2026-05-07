@@ -31,5 +31,31 @@ namespace pryEdMendezB
             X.NomArchi = "Clientes.CSV";
             if (File.Exists(X.NomArchi)) X.Recorrer(Grilla);
         }
+        private void ValidarDatos()
+        {
+            if (txtCodigo.Text != "" && txtNombre.Text != "" && txtDeuda.Text != "")
+            {
+                btnGrabar.Enabled = true;
+            }
+            else
+            {
+                btnGrabar.Enabled = false;
+            }
+        }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+            ValidarDatos();
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            ValidarDatos();
+        }
+
+        private void txtDeuda_TextChanged(object sender, EventArgs e)
+        {
+            ValidarDatos();
+        }
     }
 }
