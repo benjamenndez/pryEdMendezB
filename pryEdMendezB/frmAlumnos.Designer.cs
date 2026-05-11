@@ -79,6 +79,7 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(130, 20);
             this.txtCodigo.TabIndex = 3;
+            this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             // 
             // txtNombre
             // 
@@ -86,14 +87,17 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(315, 20);
             this.txtNombre.TabIndex = 4;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // cmbCarrera
             // 
+            this.cmbCarrera.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCarrera.FormattingEnabled = true;
             this.cmbCarrera.Location = new System.Drawing.Point(81, 114);
             this.cmbCarrera.Name = "cmbCarrera";
             this.cmbCarrera.Size = new System.Drawing.Size(315, 21);
             this.cmbCarrera.TabIndex = 5;
+            this.cmbCarrera.SelectedIndexChanged += new System.EventHandler(this.cmbCarrera_SelectedIndexChanged);
             // 
             // btnGrabar
             // 
@@ -115,6 +119,7 @@
             this.clmCarrera});
             this.dgvAlumnos.Location = new System.Drawing.Point(12, 199);
             this.dgvAlumnos.Name = "dgvAlumnos";
+            this.dgvAlumnos.RowHeadersVisible = false;
             this.dgvAlumnos.Size = new System.Drawing.Size(384, 239);
             this.dgvAlumnos.TabIndex = 7;
             // 
@@ -161,7 +166,7 @@
             this.Controls.Add(this.lblCodigo);
             this.Name = "frmAlumnos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmAlumnos";
+            this.Text = "Carga Alumnos";
             this.Load += new System.EventHandler(this.frmAlumnos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnos)).EndInit();
             this.ResumeLayout(false);

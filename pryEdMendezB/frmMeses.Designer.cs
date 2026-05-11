@@ -50,6 +50,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(142, 20);
             this.txtNombre.TabIndex = 1;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // btnLimpiar
             // 
@@ -93,6 +94,7 @@
             this.Name = "frmMeses";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMeses";
+            this.Load += new System.EventHandler(this.frmMeses_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

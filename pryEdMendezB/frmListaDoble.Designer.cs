@@ -296,7 +296,7 @@
             this.Controls.Add(this.pbColas);
             this.Name = "frmListaDoble";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmListaDoble";
+            this.Text = "Lista Doble";
             this.Load += new System.EventHandler(this.frmListaDoble_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

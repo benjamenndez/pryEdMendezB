@@ -20,30 +20,62 @@ namespace pryEdMendezB
 
         private void frmAlumnos_Load(object sender, EventArgs e)
         {
-            clsArchivo objCarrera = new clsArchivo();
-            objCarrera.NomArchi = "Carreras.csv";
-            if (File.Exists(objCarrera.NomArchi)) objCarrera.Recorrer(dgvAlumnos);
-            btnGrabar.Enabled = false;
+            clsArchivo objGrabar = new clsArchivo();
+            objGrabar.NomArchi = "Carreras.csv";
+            objGrabar.Recorrer(cmbCarrera);
 
-            clsArchivo objAlumno = new clsArchivo();
-            objAlumno.NomArchi = "Alumnos.csv";
-            if (File.Exists(objCarrera.NomArchi)) objAlumno.Recorrer(cmbCarrera);
-            btnGrabar.Enabled = true;
+            clsArchivo objAlumnos = new clsArchivo();
+            if (File.Exists(objAlumnos.NomArchi)) objAlumnos.Recorrer(dgvAlumnos);
+            btnGrabar.Enabled = false;
+        }
+        private void ValidarDatos()
+        {
+            if (txtCodigo.Text != "" && txtNombre.Text != "")
+            {
+                btnGrabar.Enabled = true;
+            }
+            else
+            {
+                btnGrabar.Enabled = false;
+            }
         }
 
         public void btnGrabar_Click(object sender, EventArgs e)
         {
-            clsArchivo objAlumnos = new clsArchivo();
-            objAlumnos.NomArchi = "Alumnos.csv";
-            objAlumnos.Grabar(txtCodigo.Text, txtNombre.Text, cmbCarrera.Text);
-            objAlumnos.Recorrer(dgvAlumnos);
+            clsArchivo objRecorrer = new clsArchivo();
+            objRecorrer.NomArchi = "Alumnos.csv";
+            objRecorrer.Grabar(txtCodigo.Text, txtNombre.Text, cmbCarrera.Text);
+            objRecorrer.Recorrer(dgvAlumnos);
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            clsArchivo X = new clsArchivo();
-            X.NomArchi = ("Clientes.csv");
-            
+            clsArchivo x = new clsArchivo();
+            x.NomArchi = ("Alumnos.csv");
+            x.BorrarTodo();
+
+            txtCodigo.Text = "";
+            txtNombre.Text = "";
+            cmbCarrera.Text = "";
+
+        }
+
+        private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; // Bloquea cualquier otro caracter
+            }
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+           ValidarDatos();
+        }
+
+        private void cmbCarrera_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ValidarDatos();
         }
     }
 }

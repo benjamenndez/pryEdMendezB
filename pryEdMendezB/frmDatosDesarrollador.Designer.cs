@@ -125,7 +125,7 @@
             this.Controls.Add(this.lblDni);
             this.Name = "frmDatosDesarrollador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmDatosDesarrollador";
+            this.Text = "Datos del Desarrollador";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

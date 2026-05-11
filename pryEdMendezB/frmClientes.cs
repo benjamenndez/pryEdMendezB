@@ -23,6 +23,7 @@ namespace pryEdMendezB
             objClientes.NomArchi = "frmClientes.csv";
             objClientes.Grabar(txtCodigo.Text, txtNombre.Text, txtDeuda.Text);
             objClientes.Recorrer(Grilla);
+            ValidarDatos();
         }
 
         private void frmClientes_Load(object sender, EventArgs e)
@@ -30,6 +31,7 @@ namespace pryEdMendezB
             clsArchivo X = new clsArchivo();
             X.NomArchi = "Clientes.CSV";
             if (File.Exists(X.NomArchi)) X.Recorrer(Grilla);
+            btnGrabar.Enabled = false;
         }
         private void ValidarDatos()
         {

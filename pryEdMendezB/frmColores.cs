@@ -54,5 +54,16 @@ namespace pryEdMendezB
 
             txtNombre.Text = "";
         }
+        private void ValidarDatos()
+        {
+            if (txtNombre.Text != "" && txtNombre.Text != "")
+            {
+                btnGrabar.Enabled = true;
+            }
+            else
+            {
+                btnGrabar.Enabled = false;
+            }
+        }
     }
 }

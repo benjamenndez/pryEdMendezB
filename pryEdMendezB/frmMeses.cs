@@ -39,5 +39,26 @@ namespace pryEdMendezB
 
             txtNombre.Text = "";
         }
+
+        private void frmMeses_Load(object sender, EventArgs e)
+        {
+            btnGrabar.Enabled = false;
+        }
+        private void ValidarDatos()
+        {
+            if (txtNombre.Text != "" && txtNombre.Text != "")
+            {
+                btnGrabar.Enabled = true;
+            }
+            else
+            {
+                btnGrabar.Enabled = false;
+            }
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            ValidarDatos();
+        }
     }
 }

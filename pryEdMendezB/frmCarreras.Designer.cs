@@ -95,7 +95,7 @@
             this.Controls.Add(this.lblCarrera);
             this.Name = "frmCarreras";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmCarreras";
+            this.Text = "Listado Carreras";
             this.ResumeLayout(false);
             this.PerformLayout();
 
