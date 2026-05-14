@@ -83,5 +83,17 @@ namespace pryEdMendezB
             frmListaDoble x = new frmListaDoble();
             x.ShowDialog();
         }
+
+        private void arbolToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmArbolBinario x = new frmArbolBinario();
+            x.ShowDialog();
+        }
+
+        private void grafoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmGrafo x = new frmGrafo();
+            x.ShowDialog();
+        }
     }
 }
