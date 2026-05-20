@@ -40,8 +40,18 @@ namespace pryEdMendezB
         }
         public clsNodo Anterior
         {
-            get { return ant; } 
+            get { return ant; }
             set { ant = value; }
+        }
+        public clsNodo Izquierdo
+        {
+            get { return ant; }
+            set { ant = value; }
+        }
+        public clsNodo Derecho
+        {
+            get { return Sig; }
+            set { Sig = value; }
         }
     }
 }
