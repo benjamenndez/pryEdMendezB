@@ -21,5 +21,10 @@ namespace pryEdMendezB
         {
 
         }
+
+        private void frmArbolBinario_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

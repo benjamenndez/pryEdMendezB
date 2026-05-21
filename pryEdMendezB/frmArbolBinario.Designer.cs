@@ -43,13 +43,13 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.trvArbol = new System.Windows.Forms.TreeView();
             this.gpbNuevoElemento = new System.Windows.Forms.GroupBox();
             this.gpbEliminar = new System.Windows.Forms.GroupBox();
             this.gpbListadoArbol = new System.Windows.Forms.GroupBox();
-            this.rbInOrden = new System.Windows.Forms.RadioButton();
-            this.rbPreOrden = new System.Windows.Forms.RadioButton();
             this.rbPostOrden = new System.Windows.Forms.RadioButton();
+            this.rbPreOrden = new System.Windows.Forms.RadioButton();
+            this.rbInOrden = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).BeginInit();
             this.gpbListadoArbol.SuspendLayout();
             this.SuspendLayout();
@@ -175,12 +175,12 @@
             this.Column3.HeaderText = "Tramite";
             this.Column3.Name = "Column3";
             // 
-            // treeView1
+            // trvArbol
             // 
-            this.treeView1.Location = new System.Drawing.Point(12, 12);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(203, 182);
-            this.treeView1.TabIndex = 12;
+            this.trvArbol.Location = new System.Drawing.Point(12, 12);
+            this.trvArbol.Name = "trvArbol";
+            this.trvArbol.Size = new System.Drawing.Size(203, 182);
+            this.trvArbol.TabIndex = 12;
             // 
             // gpbNuevoElemento
             // 
@@ -213,16 +213,16 @@
             this.gpbListadoArbol.TabStop = false;
             this.gpbListadoArbol.Text = "Listado del Arbol";
             // 
-            // rbInOrden
+            // rbPostOrden
             // 
-            this.rbInOrden.AutoSize = true;
-            this.rbInOrden.Location = new System.Drawing.Point(20, 49);
-            this.rbInOrden.Name = "rbInOrden";
-            this.rbInOrden.Size = new System.Drawing.Size(66, 17);
-            this.rbInOrden.TabIndex = 12;
-            this.rbInOrden.TabStop = true;
-            this.rbInOrden.Text = "In-Orden";
-            this.rbInOrden.UseVisualStyleBackColor = true;
+            this.rbPostOrden.AutoSize = true;
+            this.rbPostOrden.Location = new System.Drawing.Point(20, 119);
+            this.rbPostOrden.Name = "rbPostOrden";
+            this.rbPostOrden.Size = new System.Drawing.Size(78, 17);
+            this.rbPostOrden.TabIndex = 14;
+            this.rbPostOrden.TabStop = true;
+            this.rbPostOrden.Text = "Post-Orden";
+            this.rbPostOrden.UseVisualStyleBackColor = true;
             // 
             // rbPreOrden
             // 
@@ -235,16 +235,17 @@
             this.rbPreOrden.Text = "Pre-Orden";
             this.rbPreOrden.UseVisualStyleBackColor = true;
             // 
-            // rbPostOrden
+            // rbInOrden
             // 
-            this.rbPostOrden.AutoSize = true;
-            this.rbPostOrden.Location = new System.Drawing.Point(20, 119);
-            this.rbPostOrden.Name = "rbPostOrden";
-            this.rbPostOrden.Size = new System.Drawing.Size(78, 17);
-            this.rbPostOrden.TabIndex = 14;
-            this.rbPostOrden.TabStop = true;
-            this.rbPostOrden.Text = "Post-Orden";
-            this.rbPostOrden.UseVisualStyleBackColor = true;
+            this.rbInOrden.AutoSize = true;
+            this.rbInOrden.BackColor = System.Drawing.Color.Linen;
+            this.rbInOrden.Location = new System.Drawing.Point(20, 49);
+            this.rbInOrden.Name = "rbInOrden";
+            this.rbInOrden.Size = new System.Drawing.Size(66, 17);
+            this.rbInOrden.TabIndex = 12;
+            this.rbInOrden.TabStop = true;
+            this.rbInOrden.Text = "In-Orden";
+            this.rbInOrden.UseVisualStyleBackColor = false;
             // 
             // frmArbolBinario
             // 
@@ -252,7 +253,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(601, 402);
-            this.Controls.Add(this.treeView1);
+            this.Controls.Add(this.trvArbol);
             this.Controls.Add(this.txtTramite);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtCodigo);
@@ -270,6 +271,7 @@
             this.Name = "frmArbolBinario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estructuras Ramificadas - Arbol Binario";
+            this.Load += new System.EventHandler(this.frmArbolBinario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).EndInit();
             this.gpbListadoArbol.ResumeLayout(false);
             this.gpbListadoArbol.PerformLayout();
@@ -295,7 +297,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.TreeView trvArbol;
         private System.Windows.Forms.GroupBox gpbNuevoElemento;
         private System.Windows.Forms.GroupBox gpbEliminar;
         private System.Windows.Forms.GroupBox gpbListadoArbol;
