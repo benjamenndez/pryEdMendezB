@@ -54,11 +54,11 @@ namespace pryEdMendezB
                 if (R.Derecho != null) InOrdenAsc(Dgv, R.Derecho);
             }
         }
-        public void Recorrer(ComboBox Lista)
-        {
-            Lista.Items.Clear();
-            InOrdenAsc(Lista, Raiz);
-        }
+        //public void Recorrer(ComboBox Lista)
+        //{
+           // Lista.Items.Clear();
+            //InOrdenAsc(Lista, Raiz);
+        //}
         private void InOrdenAsc(ComboBox Lst, clsNodo R)
         {
             if (R.Izquierdo != null) InOrdenAsc(Lst, R.Izquierdo);
@@ -66,6 +66,57 @@ namespace pryEdMendezB
                 Lst.Items.Add(R.Codigo);
                 if (R.Derecho != null) InOrdenAsc(Lst, R.Derecho);
             }
+        }
+        public void Recorrer(clsNodo[] vector)
+        {
+            int ind = 0; // Inicializamos el índice en 0
+            if (Raiz != null)
+            {
+                InOrdenAsc(vector, ref ind, Raiz);
+            }
+        }
+        private void InOrdenAsc(clsNodo[] vec, ref int ind, clsNodo R)
+        {
+            if (R.Izquierdo != null) InOrdenAsc(vec, ref ind, R.Izquierdo);
+            vec[ind] = R;
+            ind++;
+            if (R.Derecho != null) InOrdenAsc(vec, ref ind, R.Derecho);
+
+        }
+        public void RecorrerPreOrden(DataGridView Grilla)
+        {
+            Grilla.Rows.Clear();
+            PreOrden(Grilla, Raiz);
+        }
+        private void PreOrden(DataGridView grilla, clsNodo R)
+        {
+            if (R != null) //Recorrido es raíz, izquierda y derecha
+            {
+                grilla.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
+                PreOrden(grilla, R.Izquierdo);
+                PreOrden(grilla, R.Derecho);
+            }
+        }
+        public void RecorrerPostOrden(DataGridView Grilla)
+        {
+            Grilla.Rows.Clear();
+            PostOrden(Grilla, Raiz);
+        }
+        //Procedimiento para mostrar en grilla PostOrden
+        private void PostOrden(DataGridView grilla, clsNodo R)
+        {
+            if (R != null) //Recorrido es izquierda, derecha y raíz
+            {
+                PostOrden(grilla, R.Izquierdo);
+                PostOrden(grilla, R.Derecho);
+                grilla.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
+            }
+        }
+        //Sobrecarga para recorrer el combo box 
+        public void Recorrer(ComboBox Combo)
+        {
+            Combo.Items.Clear();
+            InOrdenAsc(Combo, Raiz);
         }
         public void Recorrer(TreeView tree)
         {

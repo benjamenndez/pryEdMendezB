@@ -98,6 +98,7 @@
             this.btnAgregar.TabIndex = 4;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnEliminar
             // 
@@ -125,6 +126,7 @@
             this.cmbCodigo.Size = new System.Drawing.Size(100, 21);
             this.cmbCodigo.TabIndex = 7;
             this.cmbCodigo.SelectedIndexChanged += new System.EventHandler(this.cmbCodigo_SelectedIndexChanged);
+            this.cmbCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbCodigo_KeyPress);
             // 
             // txtCodigo
             // 
@@ -132,6 +134,7 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(100, 20);
             this.txtCodigo.TabIndex = 8;
+            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
             // txtNombre
             // 
@@ -139,6 +142,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 9;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // txtTramite
             // 
@@ -146,6 +150,7 @@
             this.txtTramite.Name = "txtTramite";
             this.txtTramite.Size = new System.Drawing.Size(100, 20);
             this.txtTramite.TabIndex = 10;
+            this.txtTramite.TextChanged += new System.EventHandler(this.txtTramite_TextChanged);
             // 
             // dgvListado
             // 
@@ -223,6 +228,7 @@
             this.rbPostOrden.TabStop = true;
             this.rbPostOrden.Text = "Post-Orden";
             this.rbPostOrden.UseVisualStyleBackColor = true;
+            this.rbPostOrden.CheckedChanged += new System.EventHandler(this.rbPostOrden_CheckedChanged);
             // 
             // rbPreOrden
             // 
@@ -234,6 +240,7 @@
             this.rbPreOrden.TabStop = true;
             this.rbPreOrden.Text = "Pre-Orden";
             this.rbPreOrden.UseVisualStyleBackColor = true;
+            this.rbPreOrden.CheckedChanged += new System.EventHandler(this.rbPreOrden_CheckedChanged);
             // 
             // rbInOrden
             // 
@@ -246,6 +253,7 @@
             this.rbInOrden.TabStop = true;
             this.rbInOrden.Text = "In-Orden";
             this.rbInOrden.UseVisualStyleBackColor = false;
+            this.rbInOrden.CheckedChanged += new System.EventHandler(this.rbInOrden_CheckedChanged);
             // 
             // frmArbolBinario
             // 

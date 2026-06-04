@@ -48,7 +48,9 @@
   <ItemGroup>
     <Compile Include="clsArbolBinario.cs" />
     <Compile Include="clsArchivo.cs" />
+    <Compile Include="clsBaseDatos.cs" />
     <Compile Include="clsCola.cs" />
+    <Compile Include="clsGrafos.cs" />
     <Compile Include="clsListaDoble.cs" />
     <Compile Include="clsListaSimple.cs" />
     <Compile Include="clsNodo.cs" />
@@ -70,6 +72,30 @@
     </Compile>
     <Compile Include="frmArbolBinario.Designer.cs">
       <DependentUpon>frmArbolBinario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBdConsultaSql.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBdConsultaSql.Designer.cs">
+      <DependentUpon>frmBdConsultaSql.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBdConsultaTablas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBdConsultaTablas.Designer.cs">
+      <DependentUpon>frmBdConsultaTablas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBdOperaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBdOperaciones.Designer.cs">
+      <DependentUpon>frmBdOperaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBdRepaso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBdRepaso.Designer.cs">
+      <DependentUpon>frmBdRepaso.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCarreras.cs">
       <SubType>Form</SubType>
@@ -141,6 +167,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmArbolBinario.resx">
       <DependentUpon>frmArbolBinario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBdConsultaSql.resx">
+      <DependentUpon>frmBdConsultaSql.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBdConsultaTablas.resx">
+      <DependentUpon>frmBdConsultaTablas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBdOperaciones.resx">
+      <DependentUpon>frmBdOperaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBdRepaso.resx">
+      <DependentUpon>frmBdRepaso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCarreras.resx">
       <DependentUpon>frmCarreras.cs</DependentUpon>

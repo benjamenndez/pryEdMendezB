@@ -102,6 +102,7 @@
             this.cmbOrigen.Name = "cmbOrigen";
             this.cmbOrigen.Size = new System.Drawing.Size(121, 21);
             this.cmbOrigen.TabIndex = 3;
+            this.cmbOrigen.SelectedIndexChanged += new System.EventHandler(this.cmbOrigen_SelectedIndexChanged);
             // 
             // cmbDestino
             // 
@@ -110,6 +111,7 @@
             this.cmbDestino.Name = "cmbDestino";
             this.cmbDestino.Size = new System.Drawing.Size(121, 21);
             this.cmbDestino.TabIndex = 4;
+            this.cmbDestino.SelectedIndexChanged += new System.EventHandler(this.cmbDestino_SelectedIndexChanged);
             // 
             // cmbOrigenC
             // 
@@ -118,6 +120,7 @@
             this.cmbOrigenC.Name = "cmbOrigenC";
             this.cmbOrigenC.Size = new System.Drawing.Size(121, 21);
             this.cmbOrigenC.TabIndex = 5;
+            this.cmbOrigenC.SelectedIndexChanged += new System.EventHandler(this.cmbOrigenC_SelectedIndexChanged);
             // 
             // cmbDestinoC
             // 
@@ -126,6 +129,7 @@
             this.cmbDestinoC.Name = "cmbDestinoC";
             this.cmbDestinoC.Size = new System.Drawing.Size(121, 21);
             this.cmbDestinoC.TabIndex = 6;
+            this.cmbDestinoC.SelectedIndexChanged += new System.EventHandler(this.cmbDestinoC_SelectedIndexChanged);
             // 
             // txtPrecio
             // 
@@ -133,6 +137,8 @@
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(121, 20);
             this.txtPrecio.TabIndex = 7;
+            this.txtPrecio.TextChanged += new System.EventHandler(this.txtPrecio_TextChanged);
+            this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
             // 
             // lblPrecioR
             // 
@@ -150,6 +156,7 @@
             this.btnBorrarTodo.TabIndex = 9;
             this.btnBorrarTodo.Text = "Borrar Todo";
             this.btnBorrarTodo.UseVisualStyleBackColor = true;
+            this.btnBorrarTodo.Click += new System.EventHandler(this.btnBorrarTodo_Click);
             // 
             // btnCargar
             // 
@@ -159,6 +166,7 @@
             this.btnCargar.TabIndex = 10;
             this.btnCargar.Text = "Cargar";
             this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // btnConsultar
             // 
@@ -168,6 +176,7 @@
             this.btnConsultar.TabIndex = 11;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // btnBorrar
             // 
@@ -177,6 +186,7 @@
             this.btnBorrar.TabIndex = 12;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // lblOrigenConsulta
             // 
@@ -255,6 +265,7 @@
             this.cmbDesde.Name = "cmbDesde";
             this.cmbDesde.Size = new System.Drawing.Size(121, 21);
             this.cmbDesde.TabIndex = 11;
+            this.cmbDesde.SelectedIndexChanged += new System.EventHandler(this.cmbDesde_SelectedIndexChanged);
             // 
             // btnListarDestino
             // 
@@ -264,6 +275,7 @@
             this.btnListarDestino.TabIndex = 11;
             this.btnListarDestino.Text = "Listar Destinos";
             this.btnListarDestino.UseVisualStyleBackColor = true;
+            this.btnListarDestino.Click += new System.EventHandler(this.btnListarDestino_Click);
             // 
             // lblHasta
             // 
@@ -281,6 +293,7 @@
             this.cmbHasta.Name = "cmbHasta";
             this.cmbHasta.Size = new System.Drawing.Size(121, 21);
             this.cmbHasta.TabIndex = 21;
+            this.cmbHasta.SelectedIndexChanged += new System.EventHandler(this.cmbHasta_SelectedIndexChanged);
             // 
             // btnListarOrigenes
             // 
@@ -290,6 +303,7 @@
             this.btnListarOrigenes.TabIndex = 22;
             this.btnListarOrigenes.Text = "Listar Origenes";
             this.btnListarOrigenes.UseVisualStyleBackColor = true;
+            this.btnListarOrigenes.Click += new System.EventHandler(this.btnListarOrigenes_Click);
             // 
             // btnVerViajes
             // 
@@ -299,6 +313,7 @@
             this.btnVerViajes.TabIndex = 23;
             this.btnVerViajes.Text = "Ver todos los viajes";
             this.btnVerViajes.UseVisualStyleBackColor = true;
+            this.btnVerViajes.Click += new System.EventHandler(this.btnVerViajes_Click);
             // 
             // dataGridView1
             // 
@@ -385,6 +400,7 @@
             this.Controls.Add(this.gpbListarViajes);
             this.Name = "frmGrafo";
             this.Text = "frmGrafo";
+            this.Load += new System.EventHandler(this.frmGrafo_Load);
             this.gpbCargaDatos.ResumeLayout(false);
             this.gpbCargaDatos.PerformLayout();
             this.gpbConsultaDatos.ResumeLayout(false);
