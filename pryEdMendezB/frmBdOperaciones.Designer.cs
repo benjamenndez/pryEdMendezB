@@ -162,6 +162,7 @@
             this.btnProMultiAtributo.TabIndex = 9;
             this.btnProMultiAtributo.Text = "Proyección Multiatributo";
             this.btnProMultiAtributo.UseVisualStyleBackColor = true;
+            this.btnProMultiAtributo.Click += new System.EventHandler(this.btnProMultiAtributo_Click);
             // 
             // btnProSimple
             // 
@@ -172,6 +173,7 @@
             this.btnProSimple.TabIndex = 6;
             this.btnProSimple.Text = "Proyección Simple";
             this.btnProSimple.UseVisualStyleBackColor = true;
+            this.btnProSimple.Click += new System.EventHandler(this.btnProSimple_Click);
             // 
             // dgvOperac
             // 

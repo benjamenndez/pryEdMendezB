@@ -16,5 +16,11 @@ namespace pryEdMendezB
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            clsBaseDatos objBaseDatos = new clsBaseDatos();
+            objBaseDatos.Listar(dgvCtaSql, textBox1.Text);
+        }
     }
 }

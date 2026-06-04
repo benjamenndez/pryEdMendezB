@@ -95,5 +95,34 @@ namespace pryEdMendezB
             frmGrafo x = new frmGrafo();
             x.ShowDialog();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void consultaDeUnaTablaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBdConsultaTablas x = new frmBdConsultaTablas();
+            x.ShowDialog();
+        }
+
+        private void consultaDeBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBdConsultaSql x = new frmBdConsultaSql();
+            x.ShowDialog();
+        }
+
+        private void operacionesEnBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBdOperaciones x = new frmBdOperaciones();
+            x.ShowDialog();
+        }
+
+        private void consultasVariasConOperacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBdRepaso x = new frmBdRepaso();
+            x.ShowDialog();
+        }
     }
 }
