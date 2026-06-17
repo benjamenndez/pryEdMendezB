@@ -68,6 +68,7 @@
             this.btnDiferencia.TabIndex = 10;
             this.btnDiferencia.Text = "Diferencia";
             this.btnDiferencia.UseVisualStyleBackColor = true;
+            this.btnDiferencia.Click += new System.EventHandler(this.btnDiferencia_Click);
             // 
             // btnInterseccion
             // 
@@ -78,6 +79,7 @@
             this.btnInterseccion.TabIndex = 9;
             this.btnInterseccion.Text = "Intersección";
             this.btnInterseccion.UseVisualStyleBackColor = true;
+            this.btnInterseccion.Click += new System.EventHandler(this.btnInterseccion_Click);
             // 
             // btnUnion
             // 
@@ -88,6 +90,7 @@
             this.btnUnion.TabIndex = 6;
             this.btnUnion.Text = "Unión";
             this.btnUnion.UseVisualStyleBackColor = true;
+            this.btnUnion.Click += new System.EventHandler(this.btnUnion_Click);
             // 
             // groupBox1
             // 
@@ -110,6 +113,7 @@
             this.btnConvolucion.TabIndex = 10;
             this.btnConvolucion.Text = "Selección por convolución";
             this.btnConvolucion.UseVisualStyleBackColor = true;
+            this.btnConvolucion.Click += new System.EventHandler(this.btnConvolucion_Click);
             // 
             // btnSelMultiAtributo
             // 
@@ -120,6 +124,7 @@
             this.btnSelMultiAtributo.TabIndex = 9;
             this.btnSelMultiAtributo.Text = "Selección Multiatributo";
             this.btnSelMultiAtributo.UseVisualStyleBackColor = true;
+            this.btnSelMultiAtributo.Click += new System.EventHandler(this.btnSelMultiAtributo_Click);
             // 
             // btnSelSimple
             // 
@@ -130,6 +135,7 @@
             this.btnSelSimple.TabIndex = 6;
             this.btnSelSimple.Text = "Selección Simple";
             this.btnSelSimple.UseVisualStyleBackColor = true;
+            this.btnSelSimple.Click += new System.EventHandler(this.btnSelSimple_Click);
             // 
             // gbEliminado
             // 
@@ -152,6 +158,7 @@
             this.btnJuntar.TabIndex = 10;
             this.btnJuntar.Text = "Juntar";
             this.btnJuntar.UseVisualStyleBackColor = true;
+            this.btnJuntar.Click += new System.EventHandler(this.btnJuntar_Click);
             // 
             // btnProMultiAtributo
             // 
@@ -195,7 +202,9 @@
             this.Controls.Add(this.gbEliminado);
             this.Controls.Add(this.dgvOperac);
             this.Name = "frmBdOperaciones";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBdOperaciones";
+            this.Load += new System.EventHandler(this.frmBdOperaciones_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.gbEliminado.ResumeLayout(false);

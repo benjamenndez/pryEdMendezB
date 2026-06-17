@@ -91,6 +91,7 @@
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.dgvTablaCta);
             this.Name = "frmBdConsultaTablas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBdConsultaTablas";
             this.Load += new System.EventHandler(this.frmBdConsultaTablas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTablaCta)).EndInit();

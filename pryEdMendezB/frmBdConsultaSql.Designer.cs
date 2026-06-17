@@ -85,6 +85,7 @@
             this.Controls.Add(this.lblConsulta);
             this.Controls.Add(this.dgvCtaSql);
             this.Name = "frmBdConsultaSql";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBdConsultaSql";
             ((System.ComponentModel.ISupportInitialize)(this.dgvCtaSql)).EndInit();
             this.ResumeLayout(false);

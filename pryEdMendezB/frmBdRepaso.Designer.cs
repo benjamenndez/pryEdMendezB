@@ -64,6 +64,7 @@
             this.cmbTabla.Name = "cmbTabla";
             this.cmbTabla.Size = new System.Drawing.Size(212, 25);
             this.cmbTabla.TabIndex = 23;
+            this.cmbTabla.SelectedIndexChanged += new System.EventHandler(this.cmbTabla_SelectedIndexChanged);
             // 
             // lblTitulo
             // 
@@ -84,6 +85,7 @@
             this.btnListar.TabIndex = 22;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // frmBdRepaso
             // 
@@ -96,7 +98,9 @@
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnListar);
             this.Name = "frmBdRepaso";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBdRepaso";
+            this.Load += new System.EventHandler(this.frmBdRepaso_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRepaso)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
